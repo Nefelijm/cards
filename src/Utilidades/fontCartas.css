@@ -1,0 +1,78 @@
+.fa-uno{
+    background-image: url('./images/uno.png');
+    height: 195px;
+    background-size: cover; 
+    background-repeat: no-repeat;  
+    padding-left: 0;  
+    
+}
+.fa-dos{
+    background-image: url('./images/dos.png'); 
+    background-size: cover;     
+    background-repeat: no-repeat;  
+    padding-left: 0;
+    height: 195px;    
+}
+.fa-tres{
+    background-image: url('./images/tres.png'); 
+    background-size: cover;     
+    background-repeat: no-repeat;  
+    padding-left: 0;
+    height: 195px;    
+}
+.fa-cuatro{
+    background-image: url('./images/cuatro.png'); 
+    background-size: cover;     
+    background-repeat: no-repeat;  
+    padding-left: 0;
+    height: 195px;    
+}
+.fa-cinco{
+    background-image: url('./images/cinco.png'); 
+    background-size: cover;     
+    background-repeat: no-repeat;  
+    padding-left: 0;
+    height: 195px;    
+}
+.fa-seis{
+    background-image: url('./images/seis.png'); 
+    background-size: cover;     
+    background-repeat: no-repeat;  
+    padding-left: 0;
+    height: 195px;    
+}
+.fa-siete{
+    background-image: url('./images/siete.png'); 
+    background-size: cover;     
+    background-repeat: no-repeat;  
+    padding-left: 0;
+    height: 195px;    
+}
+.fa-ocho{
+    background-image: url('./images/ocho.png'); 
+    background-size: cover;     
+    background-repeat: no-repeat;  
+    padding-left: 0;
+    height: 195px;    
+}
+.fa-nueve{
+    background-image: url('./images/nueve.png'); 
+    background-size: cover;     
+    background-repeat: no-repeat;  
+    padding-left: 0;
+    height: 195px;    
+}
+.fa-diez{
+    background-image: url('./images/diez.png'); 
+    background-size: cover;     
+    background-repeat: no-repeat;  
+    padding-left: 0;
+    height: 195px;    
+}
+.fa-once{
+    background-image: url('./images/once.png'); 
+    background-size: cover;     
+    background-repeat: no-repeat;  
+    padding-left: 0;
+    height: 195px;    
+}

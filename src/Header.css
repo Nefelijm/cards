@@ -3,7 +3,7 @@
   color: white;
   text-align: center;
   width: 250px;
-  margin-left: 45%;
+  margin-left: 42%;
   font-size: 2em;
 }
 
@@ -14,4 +14,6 @@
     display: inline-block;
     margin: 2%;
     font-size: 2em;
+    text-align: center;
+    margin-left: 18%;
 }
