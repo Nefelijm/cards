@@ -4,3 +4,20 @@
  background-color: rebeccapurple;
  margin: 2%;
 }
+.portada{
+  width: 125px;
+  height: 220px;
+  background-color: rgb(45, 206, 24);
+}
+.contenido{
+  width: 125px;
+  height: 220px; 
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  background-attachment: rgb(153, 51, 93); 
+}
+.ReactFlipCard{
+    width: 100%;
+    height: 100%;
+}

@@ -1,13 +1,16 @@
 import React, {Component} from 'react';
 import './Carta.css'
-// import './Utilidades/fontCartas.css'
+import FlipCard from 'react-flipcard-2';
 export default class Carta extends Component{
     render(){
-        return(
+        return(            
             <div className = 'carta'>
-             <div className={`fa ${this.props.icono} fa-3x`}>
-                .
-             </div>
+               <FlipCard>
+                   <div className ='portada'></div>									 
+									 <div className={`fa ${this.props.icono} fa-3x contenido`}>
+									 </div>									   
+								
+               </FlipCard>
             </div>
         );
     }

@@ -7,6 +7,7 @@
     "lodash.shuffle": "^4.2.0",
     "react": "^16.3.2",
     "react-dom": "^16.3.2",
+    "react-flipcard": "^0.2.1",
     "react-scripts": "1.1.4"
   },
   "scripts": {
@@ -14,5 +15,8 @@
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
+  },
+  "devDependencies": {
+    "react-flipcard-2": "^0.3.2"
   }
 }
