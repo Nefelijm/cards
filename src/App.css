@@ -1,3 +1,7 @@
-body{
+body {
     background-color: black;
-}
+  }
+  
+  div:focus {
+    outline: none !important;
+  }

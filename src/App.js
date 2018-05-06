@@ -2,14 +2,16 @@ import React, { Component } from 'react';
 import Header from './Header';
 import Tablero from './Tablero';
 import './App.css';
-import ConstruirBarajas from './Utilidades/construirBarajas';
+import construirBarajas from './Utilidades/construirBarajas';
 
 const getEstadoInicial = () => {
-  const baraja = ConstruirBarajas();
+  const baraja = construirBarajas();
   return {
     baraja,
     parejaSeleccionada: [],
-    estaComparando: false
+    estaComparando: false,
+    numeroDeIntentos: 0
+
   };
 }
 
@@ -23,8 +25,12 @@ class App extends Component {
 
   render() {
     return ( 
-      <div>
-      <Header/> 
+      <div className="App">
+      <Header
+       numeroDeIntentos={this.state.numeroDeIntentos}
+       resetearPartida={() => this.resetearPartida()}
+       
+      /> 
       <Tablero
         baraja={this.state.baraja}
         parejaSeleccionada = {this.state.parejaSeleccionada}
@@ -65,14 +71,29 @@ class App extends Component {
          return {...carta, fueAdivinada: true};
        })
      }
-
+     
+     this.verificarSiHayGanador(baraja);
      this.setState({
        parejaSeleccionada: [],
        baraja,
-       estaComparando: false
+       estaComparando: false,
+       numeroDeIntentos: this.state.numeroDeIntentos + 1
      })
     },1000)
   }
+
+  verificarSiHayGanador(baraja){
+    if (baraja.filter((carta) => !carta.fueAdivinada).length === 0)
+    {
+      alert(`Ganaste en ${this.state.numeroDeIntentos}`);      
+    }
+  }
+
+  resetearPartida() {
+    this.setState(
+      getEstadoInicial()
+    );
+  }  
 }
 
 export default App;
