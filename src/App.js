@@ -43,7 +43,15 @@ class App extends Component {
     const parejaSeleccionada = [...this.state.parejaSeleccionada, carta];
     this.setState({
       parejaSeleccionada
-    })
+    });
+
+    if(parejaSeleccionada.length === 2){
+      this.compararPareja(parejaSeleccionada);
+    }
+  }
+
+  compararPareja(parejaSeleccionada){
+    this.setState({estaComparando: true});
   }
 }
 
