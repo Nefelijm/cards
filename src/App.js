@@ -6,8 +6,10 @@ import ConstruirBarajas from './Utilidades/construirBarajas';
 
 const getEstadoInicial = () => {
   const baraja = ConstruirBarajas();
-  return{
-    baraja
+  return {
+    baraja,
+    parejaSeleccionada: [],
+    estaComparando: false
   };
 }
 
@@ -24,10 +26,24 @@ class App extends Component {
       <div>
       <Header/> 
       <Tablero
-        baraja={this.state.baraja} 
+        baraja={this.state.baraja}
+        parejaSeleccionada = {this.state.parejaSeleccionada}
+        seleccionarCarta = {(carta) => this.seleccionarCarta(carta)}
       /> 
       </div> 
     );
+  }
+
+  seleccionarCarta(carta){
+    if(
+      this.state.estaComparando || this.state.parejaSeleccionada.indexOf(carta) > -1 || carta.fueAdivinada
+    ){
+      return;
+    }
+    const parejaSeleccionada = [...this.state.parejaSeleccionada, carta];
+    this.setState({
+      parejaSeleccionada
+    })
   }
 }
 
