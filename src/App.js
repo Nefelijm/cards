@@ -52,6 +52,26 @@ class App extends Component {
 
   compararPareja(parejaSeleccionada){
     this.setState({estaComparando: true});
+
+    setTimeout(() => {
+     const [primeraCarta, segundaCarta] = parejaSeleccionada;
+     let baraja = this.state.baraja;
+     if (primeraCarta.icono === segundaCarta.icono) {
+       baraja = baraja.map((carta) => {
+         if (carta.icono !== primeraCarta.icono) {
+           return carta;
+         }
+
+         return {...carta, fueAdivinada: true};
+       })
+     }
+
+     this.setState({
+       parejaSeleccionada: [],
+       baraja,
+       estaComparando: false
+     })
+    },1000)
   }
 }
 
