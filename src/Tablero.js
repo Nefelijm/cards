@@ -4,11 +4,11 @@ import './Tablero.css';
 export default class Tablero extends Component{
     render(){
         return(
-						<div className = 'tablero'>
+					<div className = 'tablero'>
 						{
-						this.props.baraja
-						.map((carta,index) =>{
-							const estaSiendoComparada = this.props.parejaSeleccionada.indexOf(carta) > -1;
+					   	this.props.baraja
+					   	.map((carta,index) =>{
+						 	const estaSiendoComparada = this.props.parejaSeleccionada.indexOf(carta) > -1;
 							return <Carta
 							 key = {index}
 							 icono={carta.icono}
@@ -16,9 +16,9 @@ export default class Tablero extends Component{
 							 seleccionarCarta={()=>this.props.seleccionarCarta(carta)}
 							 fueAdivinada={carta.fueAdivinada}
 							 />;
-						})
+					   	})
 						}
-            </div>
+          </div>
 
         );
     }

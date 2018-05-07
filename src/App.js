@@ -16,8 +16,7 @@ const getEstadoInicial = () => {
 }
 
 
-class App extends Component { 
-  
+class App extends Component {   
   constructor(props) {
     super(props);
     this.state = getEstadoInicial();
@@ -51,9 +50,6 @@ class App extends Component {
       parejaSeleccionada
     });
 
-    if(parejaSeleccionada.length === 2){
-      this.compararPareja(parejaSeleccionada);
-    }
   }
 
   compararPareja(parejaSeleccionada){
